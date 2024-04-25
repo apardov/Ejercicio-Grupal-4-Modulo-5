@@ -9,9 +9,9 @@ CREATE TABLE Usuarios (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY, -- Se usa para genera de forma unica y autoincremental numeros
     nombre VARCHAR(50) NOT NULL, -- Se usa VARCHAR para guardar nombres de longitud variable
     apellido VARCHAR(50) NOT NULL, -- Se usa VARCHAR para guardar apellidos de longitud variable
-    contraseña VARCHAR(255) NOT NULL, -- Se usa VARCHAR para la contraseña para permitir contreñas encriptadas de longitud variable
+    contrasena VARCHAR(255) NOT NULL, -- Se usa VARCHAR para la contraseña para permitir contreñas encriptadas de longitud variable
     zona_horaria VARCHAR(6) DEFAULT 'UTC-3', -- VARCHAR para guardar zonas horarias como texto
-    género ENUM('M', 'F', 'Otro') NOT NULL, -- ENUM es lo mejor para valores predefinidos y limitados
+    genero ENUM('M', 'F', 'Otro') NOT NULL, -- ENUM es lo mejor para valores predefinidos y limitados
     telefono_contacto VARCHAR(20) NOT NULL -- VARCHAR es lo mejor para diferentes formatos de números telefónicos
 );
 
@@ -35,7 +35,7 @@ ALTER TABLE Usuarios ALTER zona_horaria SET DEFAULT 'UTC-2';
 
 -- Insertar 8 registros por tabla
 
-INSERT INTO Usuarios (nombre, apellido, contraseña, género, telefono_contacto) VALUES
+INSERT INTO Usuarios (nombre, apellido, contrasena, genero, telefono_contacto) VALUES
 ('Jorge', 'Romero', 'fgdherther', 'M', '+5691325558'),
 ('Alejandra', 'Jara', 'retougoeurg', 'F', '+569835677721'),
 ('Carla', 'Parra', 'ergergregevv', 'F', '+56916433344'),
